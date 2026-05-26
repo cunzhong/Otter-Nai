@@ -2,7 +2,7 @@
 
 // Cloudflare 配置
 export enum CF {
-  KV_NAME = 'oh_file_url',
+  KV_NAME = 'oh_file_uro',
   R2_BUCKET = 'oh_file_r2',
 
   // KV key
