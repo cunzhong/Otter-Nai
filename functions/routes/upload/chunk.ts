@@ -46,7 +46,7 @@ chunkUploadRoutes.post(
       },
     };
 
-    const kv = c.env.oh_file_url;
+    const kv = c.env.oh_file_uro;
     await kv.put(key, "", { metadata, expirationTtl: TEMP_CHUNK_TTL });
 
     return ok(c, key);
@@ -65,7 +65,7 @@ chunkUploadRoutes.get(
     const { key } = c.req.valid('query');
 
     try {
-      const kv = c.env.oh_file_url;
+      const kv = c.env.oh_file_uro;
       const { value, metadata } = await kv.getWithMetadata<FileMetadata>(key);
 
       if (!metadata?.chunkInfo) {
