@@ -178,8 +178,8 @@ curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getWebhookInfo"
 
 ### 3. 绑定 KV Namespace
 
-1. 在 Cloudflare Dashboard 创建 KV 命名空间 `oh_file_url`
-2. 将 `oh_file_url` 绑定到 Pages 项目，变量名也设为 `oh_file_url`
+1. 在 Cloudflare Dashboard 创建 KV 命名空间 `oh_file_uro`
+2. 将 `oh_file_uro` 绑定到 Pages 项目，变量名也设为 `oh_file_uro`
 
 ### 4. （可选）绑定 Workers AI
 
