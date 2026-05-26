@@ -5,7 +5,7 @@ import { ok } from '@utils/response';
 export const healthRoutes = new Hono<{ Bindings: Env }>();
 
 healthRoutes.get('/', (c) => {
-  const hasKV = !!c.env.oh_file_url;
+  const hasKV = !!c.env.oh_file_uro;
   const hasR2 = !!c.env.oh_file_r2;
   const hasTg = !!c.env.TG_BOT_TOKEN && !!c.env.TG_CHAT_ID;
   
