@@ -22,7 +22,7 @@ metaRoutes.patch(
   async (c) => {
     const key = c.req.param('key');
     const { fileName, tags, desc } = c.req.valid('json');
-    const kv = c.env.oh_file_url;
+    const kv = c.env.oh_file_uro;
 
     try {
       const { value, metadata } = await kv.getWithMetadata<FileMetadata>(key);
