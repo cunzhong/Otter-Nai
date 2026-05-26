@@ -21,7 +21,7 @@ function createSettingsRoutes<T>(
 
   app.get(path, async c => {
     try {
-      const kv = c.env.oh_file_url;
+      const kv = c.env.oh_file_uro;
       const data = await kvGetJSON<T>(kv, key, {} as T);
       return ok(c, data);
     } catch (e: any) {
@@ -31,7 +31,7 @@ function createSettingsRoutes<T>(
 
   app.post(path, async c => {
     try {
-      const kv = c.env.oh_file_url;
+      const kv = c.env.oh_file_uro;
       const body = await c.req.json<T>();
       await kv.put(key, JSON.stringify(body));
       return ok(c, body, postMsg);
