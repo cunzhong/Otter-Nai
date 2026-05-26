@@ -21,7 +21,7 @@ listRoutes.get(
   ),
   async (c) => {
     const { limit, cursor, fileType } = c.req.valid('query');
-    const kv = c.env.oh_file_url; 
+    const kv = c.env.oh_file_uro; 
 
     if (limit < 1) {
       return fail(c, 'Invalid limit parameter', 400);
